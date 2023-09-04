@@ -85,9 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				329BC1EF2AA63D5100596677 /* ContentView.swift */,
-				329BC1FE2AA63E5B00596677 /* ControlPanelView.swift */,
-				329BC2002AA6419200596677 /* DashboardElement.swift */,
 				329BC1FC2AA63DA000596677 /* CameraView.swift */,
+				329BC20B2AA6468A00596677 /* Dashboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +105,15 @@
 				329BC2022AA641AE00596677 /* CameraInput.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		329BC20B2AA6468A00596677 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				329BC1FE2AA63E5B00596677 /* ControlPanelView.swift */,
+				329BC2002AA6419200596677 /* DashboardElement.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

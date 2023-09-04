@@ -11,11 +11,45 @@ import AVFoundation
 class CameraViewModel: ObservableObject {
     @Published var cameras: [CameraInput] = []
     
+    @Published var selectedCameraID = "" {
+        didSet {
+            print(selectedCameraID)
+            changeCamera()
+        }
+    }
+    
     let session = AVCaptureSession()
     
     init() {
         refreshCameras()
         setupSession()
+    }
+    
+    func changeCamera() {
+        session.beginConfiguration()
+        defer { session.commitConfiguration() }
+        
+        guard let cameraInput = cameras.first(where: {
+            $0.id == selectedCameraID
+        }) else { return }
+        
+        let camera = cameraInput.captureDevice
+        
+        for input in session.inputs {
+            session.removeInput(input)
+        }
+        
+        do {
+            let input = try AVCaptureDeviceInput(device: camera)
+            
+            if session.canAddInput(input) {
+                session.addInput(input)
+            } else {
+                print("Unable to add camera input to session!")
+            }
+        } catch {
+            print("Error setting up camera input: \(error)")
+        }
     }
     
     func setupSession() {

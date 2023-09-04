@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var cameraViewModel = CameraViewModel()
+    @ObservedObject var cameraViewModel: CameraViewModel
+    @Environment(\.openWindow) var openWindow
     
     var body: some View {
         VStack {
@@ -20,13 +21,13 @@ struct ContentView: View {
                 .onDisappear {
                     cameraViewModel.stopSession()
                 }
-            
-            ControlPanelView(cameraViewModel: cameraViewModel)
         }
-        .padding()
+        .onAppear {
+            openWindow(id: "controlpanel")
+        }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(cameraViewModel: CameraViewModel())
 }
