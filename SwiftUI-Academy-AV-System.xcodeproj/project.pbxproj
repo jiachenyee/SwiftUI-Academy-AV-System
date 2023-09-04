@@ -22,6 +22,11 @@
 		329BC2132AA649C700596677 /* DashboardAppleTVLivePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2122AA649C700596677 /* DashboardAppleTVLivePreview.swift */; };
 		329BC2152AA64A0900596677 /* DashboardCaptureCameraSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2142AA64A0900596677 /* DashboardCaptureCameraSettings.swift */; };
 		329BC2182AA64D9B00596677 /* WelcomePresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */; };
+		329BC21B2AA64F6C00596677 /* DashboardHighlightedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC21A2AA64F6C00596677 /* DashboardHighlightedModifier.swift */; };
+		329BC21D2AA6518200596677 /* HoldingPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC21C2AA6518200596677 /* HoldingPresentationDashboardItem.swift */; };
+		329BC21F2AA6522300596677 /* LunchPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC21E2AA6522300596677 /* LunchPresentationDashboardItem.swift */; };
+		329BC2212AA652B800596677 /* AppleTVPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2202AA652B800596677 /* AppleTVPresentationDashboardItem.swift */; };
+		329BC2232AA6534F00596677 /* TimerPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2222AA6534F00596677 /* TimerPresentationDashboardItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		329BC2122AA649C700596677 /* DashboardAppleTVLivePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAppleTVLivePreview.swift; sourceTree = "<group>"; };
 		329BC2142AA64A0900596677 /* DashboardCaptureCameraSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCaptureCameraSettings.swift; sourceTree = "<group>"; };
 		329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresentationDashboardItem.swift; sourceTree = "<group>"; };
+		329BC21A2AA64F6C00596677 /* DashboardHighlightedModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHighlightedModifier.swift; sourceTree = "<group>"; };
+		329BC21C2AA6518200596677 /* HoldingPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingPresentationDashboardItem.swift; sourceTree = "<group>"; };
+		329BC21E2AA6522300596677 /* LunchPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchPresentationDashboardItem.swift; sourceTree = "<group>"; };
+		329BC2202AA652B800596677 /* AppleTVPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleTVPresentationDashboardItem.swift; sourceTree = "<group>"; };
+		329BC2222AA6534F00596677 /* TimerPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresentationDashboardItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				329BC1FE2AA63E5B00596677 /* ControlPanelView.swift */,
-				329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */,
+				329BC2192AA64F3A00596677 /* Presentation */,
 				329BC2162AA64A3100596677 /* AirPlay Setup */,
 				329BC2102AA6492A00596677 /* DashboardSection.swift */,
 				329BC2002AA6419200596677 /* DashboardElement.swift */,
@@ -140,6 +150,19 @@
 				329BC2122AA649C700596677 /* DashboardAppleTVLivePreview.swift */,
 			);
 			path = "AirPlay Setup";
+			sourceTree = "<group>";
+		};
+		329BC2192AA64F3A00596677 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */,
+				329BC21C2AA6518200596677 /* HoldingPresentationDashboardItem.swift */,
+				329BC2202AA652B800596677 /* AppleTVPresentationDashboardItem.swift */,
+				329BC21E2AA6522300596677 /* LunchPresentationDashboardItem.swift */,
+				329BC2222AA6534F00596677 /* TimerPresentationDashboardItem.swift */,
+				329BC21A2AA64F6C00596677 /* DashboardHighlightedModifier.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,12 +240,17 @@
 				329BC2112AA6492A00596677 /* DashboardSection.swift in Sources */,
 				329BC2012AA6419200596677 /* DashboardElement.swift in Sources */,
 				329BC1FF2AA63E5B00596677 /* ControlPanelView.swift in Sources */,
+				329BC21D2AA6518200596677 /* HoldingPresentationDashboardItem.swift in Sources */,
 				329BC1F02AA63D5100596677 /* ContentView.swift in Sources */,
+				329BC2212AA652B800596677 /* AppleTVPresentationDashboardItem.swift in Sources */,
 				329BC2052AA641BE00596677 /* CameraViewModel.swift in Sources */,
 				329BC1EE2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift in Sources */,
 				329BC2132AA649C700596677 /* DashboardAppleTVLivePreview.swift in Sources */,
+				329BC21B2AA64F6C00596677 /* DashboardHighlightedModifier.swift in Sources */,
 				329BC2182AA64D9B00596677 /* WelcomePresentationDashboardItem.swift in Sources */,
+				329BC21F2AA6522300596677 /* LunchPresentationDashboardItem.swift in Sources */,
 				329BC2152AA64A0900596677 /* DashboardCaptureCameraSettings.swift in Sources */,
+				329BC2232AA6534F00596677 /* TimerPresentationDashboardItem.swift in Sources */,
 				329BC2032AA641AE00596677 /* CameraInput.swift in Sources */,
 				329BC20D2AA6481D00596677 /* PresentationState.swift in Sources */,
 			);

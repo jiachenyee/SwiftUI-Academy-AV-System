@@ -29,36 +29,19 @@ struct ControlPanelView: View {
                 
                 DashboardSection(systemName: "sparkles.tv", title: "Presentation") {
                     WelcomePresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isWelcome, color: .yellow)
                     
-                    DashboardElement(icon: {
-                        Image(systemName: "eyes.inverse")
-                            .foregroundStyle(.cyan)
-                    }, title: "Holding") {
-                        
-                    }
+                    HoldingPresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isHolding, color: .cyan)
                     
-                    DashboardElement(icon: {
-                        Image(systemName: "takeoutbag.and.cup.and.straw")
-                            .foregroundStyle(.blue)
-                    }, title: "Lunch") {
-                        
-                    }
+                    LunchPresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isLunch, color: .blue)
                     
-                    DashboardElement(icon: {
-                        Image(systemName: "appletv.fill")
-                    }, title: "Hot Chocolate") {
-                        
-                    }
+                    AppleTVPresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isTV, color: .white)
                     
-                    DashboardElement(icon: {
-                        Image(systemName: "timer")
-                            .foregroundStyle(.orange)
-                    }, title: "Timer") {
-                        Text("lol")
-                        Button("Start Timer") {
-                            
-                        }
-                    }
+                    TimerPresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isTimer, color: .orange)
                 }
             }
             .frame(minWidth: 200)

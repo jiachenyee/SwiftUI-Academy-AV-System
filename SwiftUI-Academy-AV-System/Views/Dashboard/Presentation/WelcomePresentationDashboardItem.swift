@@ -29,11 +29,12 @@ struct WelcomePresentationDashboardItem: View {
             
             Spacer()
             
-            Button("Display") {
-                state = .welcome(subtitle)
+            Button("Connect to Display") {
+                withAnimation {
+                    state = .welcome(subtitle)
+                }
             }
         }
-        
     }
 }
 

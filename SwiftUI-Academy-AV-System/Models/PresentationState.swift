@@ -14,4 +14,39 @@ enum PresentationState {
     case lunch(String)
     case tv
     case timer(TimeInterval)
+    
+    var isWelcome: Bool {
+        switch self {
+        case .welcome: return true
+        default: return false
+        }
+    }
+    
+    var isHolding: Bool {
+        switch self {
+        case .holding: return true
+        default: return false
+        }
+    }
+    
+    var isLunch: Bool {
+        switch self {
+        case .lunch: return true
+        default: return false
+        }
+    }
+    
+    var isTV: Bool {
+        switch self {
+        case .tv: return true
+        default: return false
+        }
+    }
+    
+    var isTimer: Bool {
+        switch self {
+        case .timer: return true
+        default: return false
+        }
+    }
 }
