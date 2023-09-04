@@ -17,17 +17,18 @@ struct ContentView: View {
         ZStack {
             switch viewModel.state {
             case .welcome(let subtitle):
-                Text("Welcome: \(subtitle)")
+                WelcomeView(subtitle: subtitle)
+            case .holding(let title, let subtitle):
+                HoldingView(title: title, subtitle: subtitle)
             case .timer(let timeInterval):
                 Text("Timer")
             case .lunch(let returnTime):
-                Text("Lunch")
-            case .holding:
-                Text("Holding")
+                LunchView(returnTime: returnTime)
             case .tv:
                 CameraView(session: cameraViewModel.session)
             }
         }
+        .aspectRatio(16/9, contentMode: .fit)
         .onAppear {
             openWindow(id: "controlpanel")
             cameraViewModel.startSession()
