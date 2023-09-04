@@ -28,6 +28,7 @@ struct ControlPanelView: View {
                 }
                 
                 DashboardSection(systemName: "sparkles.tv", title: "Presentation") {
+                    WelcomePresentationDashboardItem(state: $viewModel.state)
                     
                     DashboardElement(icon: {
                         Image(systemName: "eyes.inverse")

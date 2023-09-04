@@ -18,19 +18,19 @@ struct WelcomePresentationDashboardItem: View {
             Image(systemName: "hand.wave")
                 .foregroundStyle(.yellow)
         }, title: "Welcome") {
-            
+            Text("Slide Subtitle")
             TextField("Subtitle", text: $subtitle)
+                .onSubmit {
+                    switch state {
+                    case .welcome: state = .welcome(subtitle)
+                    default: break
+                    }
+                }
             
             Spacer()
             
             Button("Display") {
                 state = .welcome(subtitle)
-            }
-            .onChange(of: subtitle) { oldValue, newValue in
-                switch state {
-                case .welcome: state = .welcome(newValue)
-                default: break
-                }
             }
         }
         

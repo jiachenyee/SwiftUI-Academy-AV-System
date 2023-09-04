@@ -8,6 +8,10 @@
 import Foundation
 
 class ViewModel: ObservableObject {
-    var state = PresentationState.welcome("Day 2")
+    @Published var state = PresentationState.welcome("Day 2") {
+        didSet {
+            print(state)
+        }
+    }
     
 }

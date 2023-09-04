@@ -16,8 +16,8 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             switch viewModel.state {
-            case .welcome:
-                Text("Welcome")
+            case .welcome(let subtitle):
+                Text("Welcome: \(subtitle)")
             case .timer(let timeInterval):
                 Text("Timer")
             case .lunch(let returnTime):
