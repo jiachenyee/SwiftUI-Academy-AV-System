@@ -31,7 +31,7 @@ struct LunchView: View {
             .padding(widthUnit * 95)
             
             Text("SUTD+SP SwiftUI Nano Academy")
-                .foregroundStyle(Color("Gray"))
+                .foregroundStyle(Color("SwiftUIAcademy.Gray"))
                 .font(.system(size: widthUnit * 24, weight: .regular, design: .default))
                 .frame(maxHeight: .infinity, alignment: .bottom)
                 .padding(widthUnit * 95)

@@ -21,7 +21,7 @@ struct ContentView: View {
             case .holding(let title, let subtitle):
                 HoldingView(title: title, subtitle: subtitle)
             case .timer(let timeInterval):
-                Text("Timer")
+                TimerView(timeInterval: timeInterval)
             case .lunch(let returnTime):
                 LunchView(returnTime: returnTime)
             case .tv:
