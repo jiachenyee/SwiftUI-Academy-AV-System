@@ -9,25 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @ObservedObject var viewModel: ViewModel
     @ObservedObject var cameraViewModel: CameraViewModel
     @Environment(\.openWindow) var openWindow
     
     var body: some View {
-        VStack {
-            CameraView(session: cameraViewModel.session)
-                .onAppear {
-                    cameraViewModel.startSession()
-                }
-                .onDisappear {
-                    cameraViewModel.stopSession()
-                }
+        ZStack {
+            switch viewModel.state {
+            case .welcome:
+                Text("Welcome")
+            case .timer(let timeInterval):
+                Text("Timer")
+            case .lunch(let returnTime):
+                Text("Lunch")
+            case .holding:
+                Text("Holding")
+            case .tv:
+                CameraView(session: cameraViewModel.session)
+            }
         }
         .onAppear {
             openWindow(id: "controlpanel")
+            cameraViewModel.startSession()
+        }
+        .onDisappear {
+            cameraViewModel.stopSession()
         }
     }
 }
 
 #Preview {
-    ContentView(cameraViewModel: CameraViewModel())
+    ContentView(viewModel: ViewModel(), cameraViewModel: CameraViewModel())
 }

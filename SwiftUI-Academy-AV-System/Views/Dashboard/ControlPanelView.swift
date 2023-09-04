@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ControlPanelView: View {
     
+    @ObservedObject var viewModel: ViewModel
     @ObservedObject var cameraViewModel: CameraViewModel
     
     var body: some View {
@@ -21,53 +22,43 @@ struct ControlPanelView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             ScrollView {
-                HStack {
-                    Image(systemName: "airplayvideo")
-                    Text("AirPlay")
+                DashboardSection(systemName: "airplayvideo", title: "AirPlay") {
+                    DashboardCaptureCameraSettings(cameraViewModel: cameraViewModel)
+                    DashboardAppleTVLivePreview(cameraViewModel: cameraViewModel)
                 }
-                .font(.title2)
-                .fontWeight(.medium)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 200, maximum: 400), spacing: 16)], spacing: 16) {
+                
+                DashboardSection(systemName: "sparkles.tv", title: "Presentation") {
+                    
                     DashboardElement(icon: {
-                        Image(systemName: "camera")
-                    }, title: "Apple TV Capture Camera") {
-                        Text("Select the Apple TV HDMI capture camera.")
+                        Image(systemName: "eyes.inverse")
+                            .foregroundStyle(.cyan)
+                    }, title: "Holding") {
                         
-                        Picker(selection: $cameraViewModel.selectedCameraID) {
-                            ForEach(cameraViewModel.cameras) { camera in
-                                Text(camera.name)
-                                    .id(camera.id)
-                            }
-                        } label: {
-                            EmptyView()
-                        }
+                    }
+                    
+                    DashboardElement(icon: {
+                        Image(systemName: "takeoutbag.and.cup.and.straw")
+                            .foregroundStyle(.blue)
+                    }, title: "Lunch") {
                         
-                        Spacer()
-                        
-                        Button("Refresh Camera List") {
-                            cameraViewModel.refreshCameras()
-                        }
                     }
                     
                     DashboardElement(icon: {
                         Image(systemName: "appletv.fill")
-                    }, title: "Apple TV Preview") {
-                        ZStack {
-                            VStack {
-                                Image(systemName: "pc")
-                                Text("Uh oh, something broke.")
-                            }
-                            CameraView(session: cameraViewModel.session)
+                    }, title: "Hot Chocolate") {
+                        
+                    }
+                    
+                    DashboardElement(icon: {
+                        Image(systemName: "timer")
+                            .foregroundStyle(.orange)
+                    }, title: "Timer") {
+                        Text("lol")
+                        Button("Start Timer") {
+                            
                         }
-                        .background(.background)
-                        .aspectRatio(16 / 9, contentMode: .fit)
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
                     }
                 }
-                .padding(.top, 8)
-                Divider()
-                    .padding(.vertical, 8)
             }
             .frame(minWidth: 200)
             .padding(.horizontal, 8)
@@ -80,5 +71,5 @@ struct ControlPanelView: View {
 }
 
 #Preview {
-    ControlPanelView(cameraViewModel: .init())
+    ControlPanelView(viewModel: ViewModel(), cameraViewModel: CameraViewModel())
 }

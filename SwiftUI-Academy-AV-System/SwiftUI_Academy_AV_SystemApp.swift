@@ -11,14 +11,15 @@ import SwiftUI
 struct SwiftUI_Academy_AV_SystemApp: App {
     
     @StateObject private var cameraViewModel = CameraViewModel()
+    @StateObject private var viewModel = ViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView(cameraViewModel: cameraViewModel)
+            ContentView(viewModel: viewModel, cameraViewModel: cameraViewModel)
         }
         
         Window("Control Panel", id: "controlpanel") {
-            ControlPanelView(cameraViewModel: cameraViewModel)
+            ControlPanelView(viewModel: viewModel, cameraViewModel: cameraViewModel)
         }
     }
 }

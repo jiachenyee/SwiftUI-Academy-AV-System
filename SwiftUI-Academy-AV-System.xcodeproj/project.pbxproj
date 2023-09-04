@@ -16,6 +16,12 @@
 		329BC2012AA6419200596677 /* DashboardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2002AA6419200596677 /* DashboardElement.swift */; };
 		329BC2032AA641AE00596677 /* CameraInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2022AA641AE00596677 /* CameraInput.swift */; };
 		329BC2052AA641BE00596677 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2042AA641BE00596677 /* CameraViewModel.swift */; };
+		329BC20D2AA6481D00596677 /* PresentationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC20C2AA6481D00596677 /* PresentationState.swift */; };
+		329BC20F2AA6488400596677 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC20E2AA6488400596677 /* ViewModel.swift */; };
+		329BC2112AA6492A00596677 /* DashboardSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2102AA6492A00596677 /* DashboardSection.swift */; };
+		329BC2132AA649C700596677 /* DashboardAppleTVLivePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2122AA649C700596677 /* DashboardAppleTVLivePreview.swift */; };
+		329BC2152AA64A0900596677 /* DashboardCaptureCameraSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2142AA64A0900596677 /* DashboardCaptureCameraSettings.swift */; };
+		329BC2182AA64D9B00596677 /* WelcomePresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		329BC2002AA6419200596677 /* DashboardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardElement.swift; sourceTree = "<group>"; };
 		329BC2022AA641AE00596677 /* CameraInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraInput.swift; sourceTree = "<group>"; };
 		329BC2042AA641BE00596677 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		329BC20C2AA6481D00596677 /* PresentationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationState.swift; sourceTree = "<group>"; };
+		329BC20E2AA6488400596677 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		329BC2102AA6492A00596677 /* DashboardSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardSection.swift; sourceTree = "<group>"; };
+		329BC2122AA649C700596677 /* DashboardAppleTVLivePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardAppleTVLivePreview.swift; sourceTree = "<group>"; };
+		329BC2142AA64A0900596677 /* DashboardCaptureCameraSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCaptureCameraSettings.swift; sourceTree = "<group>"; };
+		329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePresentationDashboardItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				329BC2042AA641BE00596677 /* CameraViewModel.swift */,
+				329BC20E2AA6488400596677 /* ViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -103,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				329BC2022AA641AE00596677 /* CameraInput.swift */,
+				329BC20C2AA6481D00596677 /* PresentationState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,9 +125,21 @@
 			isa = PBXGroup;
 			children = (
 				329BC1FE2AA63E5B00596677 /* ControlPanelView.swift */,
+				329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */,
+				329BC2162AA64A3100596677 /* AirPlay Setup */,
+				329BC2102AA6492A00596677 /* DashboardSection.swift */,
 				329BC2002AA6419200596677 /* DashboardElement.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		329BC2162AA64A3100596677 /* AirPlay Setup */ = {
+			isa = PBXGroup;
+			children = (
+				329BC2142AA64A0900596677 /* DashboardCaptureCameraSettings.swift */,
+				329BC2122AA649C700596677 /* DashboardAppleTVLivePreview.swift */,
+			);
+			path = "AirPlay Setup";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +213,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				329BC1FD2AA63DA000596677 /* CameraView.swift in Sources */,
+				329BC20F2AA6488400596677 /* ViewModel.swift in Sources */,
+				329BC2112AA6492A00596677 /* DashboardSection.swift in Sources */,
 				329BC2012AA6419200596677 /* DashboardElement.swift in Sources */,
 				329BC1FF2AA63E5B00596677 /* ControlPanelView.swift in Sources */,
 				329BC1F02AA63D5100596677 /* ContentView.swift in Sources */,
 				329BC2052AA641BE00596677 /* CameraViewModel.swift in Sources */,
 				329BC1EE2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift in Sources */,
+				329BC2132AA649C700596677 /* DashboardAppleTVLivePreview.swift in Sources */,
+				329BC2182AA64D9B00596677 /* WelcomePresentationDashboardItem.swift in Sources */,
+				329BC2152AA64A0900596677 /* DashboardCaptureCameraSettings.swift in Sources */,
 				329BC2032AA641AE00596677 /* CameraInput.swift in Sources */,
+				329BC20D2AA6481D00596677 /* PresentationState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
