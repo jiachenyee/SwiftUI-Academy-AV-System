@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import Subsonic
 
 struct ContentView: View {
     
     @ObservedObject var viewModel: ViewModel
     @ObservedObject var cameraViewModel: CameraViewModel
+    @ObservedObject var soundPlayer: SubsonicPlayer
+    
     @Environment(\.openWindow) var openWindow
     
     var body: some View {
@@ -21,7 +24,7 @@ struct ContentView: View {
             case .holding(let title, let subtitle):
                 HoldingView(title: title, subtitle: subtitle)
             case .timer(let timeInterval):
-                TimerView(timeInterval: timeInterval)
+                TimerView(soundPlayer: soundPlayer, timeInterval: timeInterval)
             case .lunch(let returnTime):
                 LunchView(returnTime: returnTime)
             case .tv:
@@ -40,5 +43,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(viewModel: ViewModel(), cameraViewModel: CameraViewModel())
+    ContentView(viewModel: ViewModel(), cameraViewModel: CameraViewModel(), soundPlayer: SubsonicPlayer(sound: "radar.m4a"))
 }

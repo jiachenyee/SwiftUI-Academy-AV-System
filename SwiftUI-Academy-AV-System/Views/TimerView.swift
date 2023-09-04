@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import Subsonic
 
 struct TimerView: View {
     
+    @ObservedObject var soundPlayer: SubsonicPlayer
+    
     var timeInterval: TimeInterval
     
-    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
     @State private var timeElapsed: TimeInterval = 0
     
@@ -103,14 +106,16 @@ struct TimerView: View {
             }
         }
         
-        if timeRemaining <= 0 {
+        if timeRemaining <= 0 && !timesUp {
             withAnimation {
                 timesUp = true
             }
+            
+            soundPlayer.play()
         }
     }
 }
 
 #Preview {
-    TimerView(timeInterval: 500)
+    TimerView(soundPlayer: .init(sound: "radar.m4a"), timeInterval: 500)
 }

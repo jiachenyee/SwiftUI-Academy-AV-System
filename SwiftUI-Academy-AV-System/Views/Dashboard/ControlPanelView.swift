@@ -7,11 +7,13 @@
 
 import Foundation
 import SwiftUI
+import Subsonic
 
 struct ControlPanelView: View {
     
     @ObservedObject var viewModel: ViewModel
     @ObservedObject var cameraViewModel: CameraViewModel
+    @ObservedObject var soundPlayer: SubsonicPlayer
     
     var body: some View {
         VStack {
@@ -43,6 +45,29 @@ struct ControlPanelView: View {
                     TimerPresentationDashboardItem(state: $viewModel.state)
                         .dashboardHighlighted(isEnabled: viewModel.state.isTimer, color: .orange)
                 }
+                
+                DashboardSection(systemName: "speaker.wave.2", title: "Audio") {
+                    DashboardElement(icon: {
+                        Image(systemName: "play.fill")
+                            .foregroundStyle(.green)
+                    }, title: "Play/Pause") {
+                        Text("Radar Alarm Sound")
+                        HStack {
+                            Button {
+                                soundPlayer.play()
+                            } label: {
+                                Image(systemName: "play.fill")
+                                    .frame(width: 32, height: 32)
+                            }
+                            Button {
+                                soundPlayer.stop()
+                            } label: {
+                                Image(systemName: "stop.fill")
+                                    .frame(width: 32, height: 32)
+                            }
+                        }
+                    }
+                }
             }
             .frame(minWidth: 200)
             .padding(.horizontal, 8)
@@ -50,10 +75,10 @@ struct ControlPanelView: View {
             Spacer()
         }
         .padding()
-    
+        
     }
 }
 
 #Preview {
-    ControlPanelView(viewModel: ViewModel(), cameraViewModel: CameraViewModel())
+    ControlPanelView(viewModel: ViewModel(), cameraViewModel: CameraViewModel(), soundPlayer: .init(sound: "radar.m4a"))
 }

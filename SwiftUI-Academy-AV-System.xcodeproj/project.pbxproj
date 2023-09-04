@@ -31,6 +31,8 @@
 		329BC2272AA657BB00596677 /* HoldingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2262AA657BB00596677 /* HoldingView.swift */; };
 		329BC2292AA6588500596677 /* LunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2282AA6588500596677 /* LunchView.swift */; };
 		329BC22B2AA6595C00596677 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC22A2AA6595C00596677 /* TimerView.swift */; };
+		329BC22E2AA660EF00596677 /* Subsonic in Frameworks */ = {isa = PBXBuildFile; productRef = 329BC22D2AA660EF00596677 /* Subsonic */; };
+		329BC2302AA6615C00596677 /* radar.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 329BC22F2AA6615C00596677 /* radar.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,7 @@
 		329BC2262AA657BB00596677 /* HoldingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingView.swift; sourceTree = "<group>"; };
 		329BC2282AA6588500596677 /* LunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchView.swift; sourceTree = "<group>"; };
 		329BC22A2AA6595C00596677 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		329BC22F2AA6615C00596677 /* radar.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = radar.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				329BC22E2AA660EF00596677 /* Subsonic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +101,7 @@
 				329BC2062AA641CE00596677 /* Views */,
 				329BC2072AA641D200596677 /* View Model */,
 				329BC1F12AA63D5400596677 /* Assets.xcassets */,
+				329BC22F2AA6615C00596677 /* radar.m4a */,
 				329BC1F62AA63D5400596677 /* SwiftUI_Academy_AV_System.entitlements */,
 				329BC1F32AA63D5400596677 /* Preview Content */,
 			);
@@ -193,6 +198,9 @@
 			dependencies = (
 			);
 			name = "SwiftUI-Academy-AV-System";
+			packageProductDependencies = (
+				329BC22D2AA660EF00596677 /* Subsonic */,
+			);
 			productName = "SwiftUI-Academy-AV-System";
 			productReference = 329BC1EA2AA63D5100596677 /* SwiftUI-Academy-AV-System.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 329BC1E12AA63D5100596677;
+			packageReferences = (
+				329BC22C2AA660EF00596677 /* XCRemoteSwiftPackageReference "Subsonic" */,
+			);
 			productRefGroup = 329BC1EB2AA63D5100596677 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				329BC1F52AA63D5400596677 /* Preview Assets.xcassets in Resources */,
+				329BC2302AA6615C00596677 /* radar.m4a in Resources */,
 				329BC1F22AA63D5400596677 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +483,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		329BC22C2AA660EF00596677 /* XCRemoteSwiftPackageReference "Subsonic" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/Subsonic";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		329BC22D2AA660EF00596677 /* Subsonic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 329BC22C2AA660EF00596677 /* XCRemoteSwiftPackageReference "Subsonic" */;
+			productName = Subsonic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 329BC1E22AA63D5100596677 /* Project object */;
 }
