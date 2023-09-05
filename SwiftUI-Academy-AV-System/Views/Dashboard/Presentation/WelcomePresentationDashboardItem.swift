@@ -22,7 +22,10 @@ struct WelcomePresentationDashboardItem: View {
             TextField("Subtitle", text: $subtitle)
                 .onSubmit {
                     switch state {
-                    case .welcome: state = .welcome(subtitle)
+                    case .welcome: 
+                        withAnimation {
+                            state = .welcome(subtitle)
+                        }
                     default: break
                     }
                 }
