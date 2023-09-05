@@ -42,5 +42,5 @@ struct WelcomePresentationDashboardItem: View {
 }
 
 #Preview {
-    WelcomePresentationDashboardItem(state: .constant(.tv))
+    WelcomePresentationDashboardItem(state: .constant(.tv(.normal)))
 }

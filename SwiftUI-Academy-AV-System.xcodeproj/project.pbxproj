@@ -33,6 +33,7 @@
 		329BC22B2AA6595C00596677 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC22A2AA6595C00596677 /* TimerView.swift */; };
 		329BC22E2AA660EF00596677 /* Subsonic in Frameworks */ = {isa = PBXBuildFile; productRef = 329BC22D2AA660EF00596677 /* Subsonic */; };
 		329BC2302AA6615C00596677 /* radar.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 329BC22F2AA6615C00596677 /* radar.m4a */; };
+		32A3C41E2AA6E5CD0044E575 /* AppleTVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C41D2AA6E5CD0044E575 /* AppleTVView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		329BC2282AA6588500596677 /* LunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchView.swift; sourceTree = "<group>"; };
 		329BC22A2AA6595C00596677 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		329BC22F2AA6615C00596677 /* radar.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = radar.m4a; sourceTree = "<group>"; };
+		32A3C41D2AA6E5CD0044E575 /* AppleTVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleTVView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				329BC1EF2AA63D5100596677 /* ContentView.swift */,
+				32A3C41D2AA6E5CD0044E575 /* AppleTVView.swift */,
 				329BC22A2AA6595C00596677 /* TimerView.swift */,
 				329BC2262AA657BB00596677 /* HoldingView.swift */,
 				329BC2282AA6588500596677 /* LunchView.swift */,
@@ -265,6 +268,7 @@
 				329BC2012AA6419200596677 /* DashboardElement.swift in Sources */,
 				329BC1FF2AA63E5B00596677 /* ControlPanelView.swift in Sources */,
 				329BC21D2AA6518200596677 /* HoldingPresentationDashboardItem.swift in Sources */,
+				32A3C41E2AA6E5CD0044E575 /* AppleTVView.swift in Sources */,
 				329BC22B2AA6595C00596677 /* TimerView.swift in Sources */,
 				329BC1F02AA63D5100596677 /* ContentView.swift in Sources */,
 				329BC2212AA652B800596677 /* AppleTVPresentationDashboardItem.swift in Sources */,

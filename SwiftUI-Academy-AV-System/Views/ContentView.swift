@@ -27,8 +27,8 @@ struct ContentView: View {
                 TimerView(soundPlayer: soundPlayer, timeInterval: timeInterval)
             case .lunch(let returnTime):
                 LunchView(returnTime: returnTime)
-            case .tv:
-                CameraView(session: cameraViewModel.session)
+            case .tv(let zoomState):
+                AppleTVView(zoomState: zoomState, cameraViewModel: cameraViewModel)
             }
         }
         .aspectRatio(16/9, contentMode: .fit)

@@ -32,5 +32,5 @@ struct LunchPresentationDashboardItem: View {
 }
 
 #Preview {
-    LunchPresentationDashboardItem(state: .constant(.tv))
+    LunchPresentationDashboardItem(state: .constant(.tv(.normal)))
 }

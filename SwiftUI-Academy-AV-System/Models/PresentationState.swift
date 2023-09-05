@@ -6,13 +6,39 @@
 //
 
 import Foundation
+import SwiftUI
+
+enum ZoomPosition {
+    case topLeading
+    case bottomLeading
+    case topTrailing
+    case bottomTrailing
+    case normal
+    
+    var scale: CGFloat {
+        switch self {
+        case .topLeading, .bottomLeading, .topTrailing, .bottomTrailing: return 1.5
+        case .normal: return 1
+        }
+    }
+    
+    var unitPoint: UnitPoint {
+        switch self {
+        case .topLeading: return .topLeading
+        case .bottomLeading: return .bottomLeading
+        case .topTrailing: return .topTrailing
+        case .bottomTrailing: return .bottomTrailing
+        case .normal: return .center
+        }
+    }
+}
 
 enum PresentationState {
     case welcome(String)
     case holding(String, String)
     /// - Parameters: Return time
     case lunch(String)
-    case tv
+    case tv(ZoomPosition)
     case timer(TimeInterval)
     
     var isWelcome: Bool {

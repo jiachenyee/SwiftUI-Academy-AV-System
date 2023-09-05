@@ -36,5 +36,5 @@ struct HoldingPresentationDashboardItem: View {
 }
 
 #Preview {
-    HoldingPresentationDashboardItem(state: .constant(.tv))
+    HoldingPresentationDashboardItem(state: .constant(.tv(.normal)))
 }

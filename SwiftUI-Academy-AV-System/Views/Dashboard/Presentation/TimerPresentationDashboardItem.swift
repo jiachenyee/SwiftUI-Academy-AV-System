@@ -31,5 +31,5 @@ struct TimerPresentationDashboardItem: View {
 }
 
 #Preview {
-    TimerPresentationDashboardItem(state: .constant(.tv))
+    TimerPresentationDashboardItem(state: .constant(.tv(.normal)))
 }
