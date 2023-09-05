@@ -1,7 +1,7 @@
 # SUTD-SP SwiftUI Nano Academy AV System
 ## I had an idea at 1 AM
 
-Look, an app that can manage the entire AV set up.
+Look! An app that can manage the entire AV set up. I'm not entirely sure why I built this, but it was quite a good idea at 1 AM. Editing this at 8 AM, I'm not _entirely_ sure if it was worth the effort but it was quite funny.
 - Welcome state that has a nice animating gradient, I guess.
 - Connect Apple TV as source via HDMI capture card.
 - Customizable Holding Slides.
