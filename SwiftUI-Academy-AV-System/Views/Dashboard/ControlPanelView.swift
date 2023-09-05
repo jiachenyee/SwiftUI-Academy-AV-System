@@ -80,6 +80,10 @@ struct ControlPanelView: View {
                         }
                     }
                 }
+                
+                DashboardSection(systemName: "av.remote", title: "Remote Control") {
+                    RemoteControlDashboardItem(viewModel: viewModel)
+                }
             }
             .frame(minWidth: 200)
             .padding(.horizontal, 8)

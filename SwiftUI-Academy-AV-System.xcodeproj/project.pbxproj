@@ -35,6 +35,20 @@
 		329BC2302AA6615C00596677 /* radar.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 329BC22F2AA6615C00596677 /* radar.m4a */; };
 		32A3C41E2AA6E5CD0044E575 /* AppleTVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C41D2AA6E5CD0044E575 /* AppleTVView.swift */; };
 		32A3C43A2AA70C130044E575 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4392AA70C130044E575 /* CountdownView.swift */; };
+		32A3C4422AA77CBD0044E575 /* AV_Remote_ControlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4412AA77CBD0044E575 /* AV_Remote_ControlApp.swift */; };
+		32A3C4442AA77CBD0044E575 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4432AA77CBD0044E575 /* ContentView.swift */; };
+		32A3C4462AA77CC00044E575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A3C4452AA77CC00044E575 /* Assets.xcassets */; };
+		32A3C4492AA77CC00044E575 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A3C4482AA77CC00044E575 /* Preview Assets.xcassets */; };
+		32A3C44F2AA77CD60044E575 /* MultipeerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C44E2AA77CD60044E575 /* MultipeerConstants.swift */; };
+		32A3C4502AA77CD80044E575 /* MultipeerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C44E2AA77CD60044E575 /* MultipeerConstants.swift */; };
+		32A3C4542AA77EC70044E575 /* ViewModel+MultipeerConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4532AA77EC70044E575 /* ViewModel+MultipeerConnectivity.swift */; };
+		32A3C4582AA780020044E575 /* RemoteControlDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4572AA780020044E575 /* RemoteControlDashboardItem.swift */; };
+		32A3C45A2AA781FC0044E575 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4592AA781FC0044E575 /* ViewModel.swift */; };
+		32A3C45C2AA7820F0044E575 /* ViewModel+MultipeerConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C45B2AA7820F0044E575 /* ViewModel+MultipeerConnectivity.swift */; };
+		32A3C45E2AA782280044E575 /* MCBrowserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C45D2AA782280044E575 /* MCBrowserManager.swift */; };
+		32A3C45F2AA782480044E575 /* PresentationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC20C2AA6481D00596677 /* PresentationState.swift */; };
+		32A3C4622AA795130044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4612AA795130044E575 /* MCSessionState+CustomStringConvertible.swift */; };
+		32A3C4632AA7951A0044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4612AA795130044E575 /* MCSessionState+CustomStringConvertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +81,20 @@
 		329BC22F2AA6615C00596677 /* radar.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = radar.m4a; sourceTree = "<group>"; };
 		32A3C41D2AA6E5CD0044E575 /* AppleTVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleTVView.swift; sourceTree = "<group>"; };
 		32A3C4392AA70C130044E575 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		32A3C43F2AA77CBD0044E575 /* AV Remote Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AV Remote Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32A3C4412AA77CBD0044E575 /* AV_Remote_ControlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AV_Remote_ControlApp.swift; sourceTree = "<group>"; };
+		32A3C4432AA77CBD0044E575 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		32A3C4452AA77CC00044E575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32A3C4482AA77CC00044E575 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		32A3C44E2AA77CD60044E575 /* MultipeerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerConstants.swift; sourceTree = "<group>"; };
+		32A3C4532AA77EC70044E575 /* ViewModel+MultipeerConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+MultipeerConnectivity.swift"; sourceTree = "<group>"; };
+		32A3C4552AA77F890044E575 /* AV-Remote-Control-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "AV-Remote-Control-Info.plist"; sourceTree = SOURCE_ROOT; };
+		32A3C4562AA77FB70044E575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		32A3C4572AA780020044E575 /* RemoteControlDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteControlDashboardItem.swift; sourceTree = "<group>"; };
+		32A3C4592AA781FC0044E575 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		32A3C45B2AA7820F0044E575 /* ViewModel+MultipeerConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModel+MultipeerConnectivity.swift"; sourceTree = "<group>"; };
+		32A3C45D2AA782280044E575 /* MCBrowserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCBrowserManager.swift; sourceTree = "<group>"; };
+		32A3C4612AA795130044E575 /* MCSessionState+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCSessionState+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +106,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32A3C43C2AA77CBD0044E575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		329BC1E12AA63D5100596677 = {
 			isa = PBXGroup;
 			children = (
+				32A3C44D2AA77CCC0044E575 /* Shared */,
 				329BC1EC2AA63D5100596677 /* SwiftUI-Academy-AV-System */,
+				32A3C4402AA77CBD0044E575 /* AV Remote Control */,
 				329BC1EB2AA63D5100596677 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				329BC1EA2AA63D5100596677 /* SwiftUI-Academy-AV-System.app */,
+				32A3C43F2AA77CBD0044E575 /* AV Remote Control.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +138,7 @@
 		329BC1EC2AA63D5100596677 /* SwiftUI-Academy-AV-System */ = {
 			isa = PBXGroup;
 			children = (
+				32A3C4562AA77FB70044E575 /* Info.plist */,
 				329BC1ED2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift */,
 				329BC2082AA641D900596677 /* Models */,
 				329BC2062AA641CE00596677 /* Views */,
@@ -141,6 +180,7 @@
 			children = (
 				329BC2042AA641BE00596677 /* CameraViewModel.swift */,
 				329BC20E2AA6488400596677 /* ViewModel.swift */,
+				32A3C4532AA77EC70044E575 /* ViewModel+MultipeerConnectivity.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -149,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				329BC2022AA641AE00596677 /* CameraInput.swift */,
-				329BC20C2AA6481D00596677 /* PresentationState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				329BC1FE2AA63E5B00596677 /* ControlPanelView.swift */,
+				32A3C4572AA780020044E575 /* RemoteControlDashboardItem.swift */,
 				329BC2192AA64F3A00596677 /* Presentation */,
 				329BC2162AA64A3100596677 /* AirPlay Setup */,
 				329BC2102AA6492A00596677 /* DashboardSection.swift */,
@@ -188,6 +228,47 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		32A3C4402AA77CBD0044E575 /* AV Remote Control */ = {
+			isa = PBXGroup;
+			children = (
+				32A3C4552AA77F890044E575 /* AV-Remote-Control-Info.plist */,
+				32A3C4412AA77CBD0044E575 /* AV_Remote_ControlApp.swift */,
+				32A3C4432AA77CBD0044E575 /* ContentView.swift */,
+				32A3C4592AA781FC0044E575 /* ViewModel.swift */,
+				32A3C45B2AA7820F0044E575 /* ViewModel+MultipeerConnectivity.swift */,
+				32A3C45D2AA782280044E575 /* MCBrowserManager.swift */,
+				32A3C4452AA77CC00044E575 /* Assets.xcassets */,
+				32A3C4472AA77CC00044E575 /* Preview Content */,
+			);
+			path = "AV Remote Control";
+			sourceTree = "<group>";
+		};
+		32A3C4472AA77CC00044E575 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				32A3C4482AA77CC00044E575 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		32A3C44D2AA77CCC0044E575 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				32A3C44E2AA77CD60044E575 /* MultipeerConstants.swift */,
+				329BC20C2AA6481D00596677 /* PresentationState.swift */,
+				32A3C4602AA795090044E575 /* Helper Methods */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		32A3C4602AA795090044E575 /* Helper Methods */ = {
+			isa = PBXGroup;
+			children = (
+				32A3C4612AA795130044E575 /* MCSessionState+CustomStringConvertible.swift */,
+			);
+			path = "Helper Methods";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +292,23 @@
 			productReference = 329BC1EA2AA63D5100596677 /* SwiftUI-Academy-AV-System.app */;
 			productType = "com.apple.product-type.application";
 		};
+		32A3C43E2AA77CBD0044E575 /* AV Remote Control */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32A3C44A2AA77CC00044E575 /* Build configuration list for PBXNativeTarget "AV Remote Control" */;
+			buildPhases = (
+				32A3C43B2AA77CBD0044E575 /* Sources */,
+				32A3C43C2AA77CBD0044E575 /* Frameworks */,
+				32A3C43D2AA77CBD0044E575 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AV Remote Control";
+			productName = "AV Remote Control";
+			productReference = 32A3C43F2AA77CBD0044E575 /* AV Remote Control.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +320,9 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					329BC1E92AA63D5100596677 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					32A3C43E2AA77CBD0044E575 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
@@ -243,6 +344,7 @@
 			projectRoot = "";
 			targets = (
 				329BC1E92AA63D5100596677 /* SwiftUI-Academy-AV-System */,
+				32A3C43E2AA77CBD0044E575 /* AV Remote Control */,
 			);
 		};
 /* End PBXProject section */
@@ -258,6 +360,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32A3C43D2AA77CBD0044E575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A3C4492AA77CC00044E575 /* Preview Assets.xcassets in Resources */,
+				32A3C4462AA77CC00044E575 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -267,6 +378,7 @@
 			files = (
 				329BC1FD2AA63DA000596677 /* CameraView.swift in Sources */,
 				329BC20F2AA6488400596677 /* ViewModel.swift in Sources */,
+				32A3C4582AA780020044E575 /* RemoteControlDashboardItem.swift in Sources */,
 				329BC2112AA6492A00596677 /* DashboardSection.swift in Sources */,
 				329BC2012AA6419200596677 /* DashboardElement.swift in Sources */,
 				329BC1FF2AA63E5B00596677 /* ControlPanelView.swift in Sources */,
@@ -276,6 +388,7 @@
 				329BC1F02AA63D5100596677 /* ContentView.swift in Sources */,
 				329BC2212AA652B800596677 /* AppleTVPresentationDashboardItem.swift in Sources */,
 				329BC2272AA657BB00596677 /* HoldingView.swift in Sources */,
+				32A3C4542AA77EC70044E575 /* ViewModel+MultipeerConnectivity.swift in Sources */,
 				329BC2052AA641BE00596677 /* CameraViewModel.swift in Sources */,
 				329BC1EE2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift in Sources */,
 				329BC2132AA649C700596677 /* DashboardAppleTVLivePreview.swift in Sources */,
@@ -289,6 +402,23 @@
 				329BC2032AA641AE00596677 /* CameraInput.swift in Sources */,
 				329BC20D2AA6481D00596677 /* PresentationState.swift in Sources */,
 				329BC2252AA654FB00596677 /* WelcomeView.swift in Sources */,
+				32A3C4632AA7951A0044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */,
+				32A3C44F2AA77CD60044E575 /* MultipeerConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32A3C43B2AA77CBD0044E575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32A3C4442AA77CBD0044E575 /* ContentView.swift in Sources */,
+				32A3C45F2AA782480044E575 /* PresentationState.swift in Sources */,
+				32A3C4422AA77CBD0044E575 /* AV_Remote_ControlApp.swift in Sources */,
+				32A3C45E2AA782280044E575 /* MCBrowserManager.swift in Sources */,
+				32A3C45A2AA781FC0044E575 /* ViewModel.swift in Sources */,
+				32A3C4502AA77CD80044E575 /* MultipeerConstants.swift in Sources */,
+				32A3C4622AA795130044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */,
+				32A3C45C2AA7820F0044E575 /* ViewModel+MultipeerConnectivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,8 +557,11 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Academy-AV-System/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to remote controller";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Show Apple TV Live Feed";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to remote controller";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -455,8 +588,11 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Academy-AV-System/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to remote controller";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Show Apple TV Live Feed";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to remote controller";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -466,6 +602,75 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		32A3C44B2AA77CC00044E575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AV Remote Control/Preview Content\"";
+				DEVELOPMENT_TEAM = 9W63WN9LG4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AV-Remote-Control-Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to remote controller";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to hub";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.jiachen.AV-Remote-Control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32A3C44C2AA77CC00044E575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AV Remote Control/Preview Content\"";
+				DEVELOPMENT_TEAM = 9W63WN9LG4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "AV-Remote-Control-Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to remote controller";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connect to hub";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "app.jiachen.AV-Remote-Control";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -486,6 +691,15 @@
 			buildConfigurations = (
 				329BC1FA2AA63D5400596677 /* Debug */,
 				329BC1FB2AA63D5400596677 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32A3C44A2AA77CC00044E575 /* Build configuration list for PBXNativeTarget "AV Remote Control" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32A3C44B2AA77CC00044E575 /* Debug */,
+				32A3C44C2AA77CC00044E575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

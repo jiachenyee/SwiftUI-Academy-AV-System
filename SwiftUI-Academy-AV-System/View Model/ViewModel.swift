@@ -6,12 +6,22 @@
 //
 
 import Foundation
+import MultipeerConnectivity
 
-class ViewModel: ObservableObject {
-    @Published var state = PresentationState.welcome("Day 2") {
-        didSet {
-            print(state)
-        }
-    }
+class ViewModel: NSObject, ObservableObject {
     
+    var peerID: MCPeerID!
+    var mcSession: MCSession?
+    var mcAdvertiserAssistant: MCAdvertiserAssistant!
+
+    @Published var state = PresentationState.welcome("Day 2")
+    @Published var connectedPeers = 0
+    @Published var isHosting = false
+    
+    let deviceId = UUID().uuidString
+    
+    override init() {
+        super.init()
+        
+    }
 }

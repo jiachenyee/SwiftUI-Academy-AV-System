@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum ZoomPosition {
+enum ZoomPosition: Codable {
     case topLeading
     case bottomLeading
     case topTrailing
@@ -34,7 +34,7 @@ enum ZoomPosition {
     }
 }
 
-enum PresentationState {
+enum PresentationState: Codable {
     case welcome(String)
     case holding(String, String)
     /// - Parameters: Return time
