@@ -44,6 +44,18 @@ struct ControlPanelView: View {
                     
                     TimerPresentationDashboardItem(state: $viewModel.state)
                         .dashboardHighlighted(isEnabled: viewModel.state.isTimer, color: .orange)
+                    
+                    DashboardElement(icon: {
+                        Image(systemName: "calendar.badge.clock")
+                            .foregroundStyle(.red)
+                    }, title: "Countdown") {
+                        Spacer()
+                        Button("Connect to Display") {
+                            withAnimation {
+                                viewModel.state = .countdown
+                            }
+                        }
+                    }
                 }
                 
                 DashboardSection(systemName: "speaker.wave.2", title: "Audio") {

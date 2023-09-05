@@ -13,11 +13,12 @@ enum ZoomPosition {
     case bottomLeading
     case topTrailing
     case bottomTrailing
+    case center
     case normal
     
     var scale: CGFloat {
         switch self {
-        case .topLeading, .bottomLeading, .topTrailing, .bottomTrailing: return 1.5
+        case .topLeading, .bottomLeading, .topTrailing, .bottomTrailing, .center: return 1.5
         case .normal: return 1
         }
     }
@@ -28,7 +29,7 @@ enum ZoomPosition {
         case .bottomLeading: return .bottomLeading
         case .topTrailing: return .topTrailing
         case .bottomTrailing: return .bottomTrailing
-        case .normal: return .center
+        case .normal, .center: return .center
         }
     }
 }
@@ -40,6 +41,7 @@ enum PresentationState {
     case lunch(String)
     case tv(ZoomPosition)
     case timer(TimeInterval)
+    case countdown
     
     var isWelcome: Bool {
         switch self {
