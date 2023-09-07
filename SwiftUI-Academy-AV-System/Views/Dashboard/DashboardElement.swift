@@ -34,7 +34,11 @@ struct DashboardElement<Content: View, IconImage: View>: View {
             
             content()
         }
+#if os(macOS)
         .frame(height: 200, alignment: .top)
+#else
+        .frame(height: 300, alignment: .top)
+#endif
         .padding()
         .background(.white.opacity(0.1))
         .cornerRadius(8)

@@ -11,17 +11,36 @@ struct ContentView: View {
     
     @StateObject private var viewModel = ViewModel()
     @State private var confirmDisconnection = false
+    @State private var tempState: PresentationState = .welcome("")
     
     var body: some View {
         NavigationStack {
-            List {
-                Section("Presentation") {
-                    
+            ScrollView {
+                TabView {
+                    WelcomePresentationDashboardItem(state: $tempState)
+                        .padding()
+                        .frame(maxHeight: .infinity, alignment: .top)
+                    HoldingPresentationDashboardItem(state: $tempState)
+                        .padding()
+                        .frame(maxHeight: .infinity, alignment: .top)
+                    AppleTVPresentationDashboardItem(state: $tempState)
+                        .padding()
+                        .frame(maxHeight: .infinity, alignment: .top)
+                    LunchPresentationDashboardItem(state: $tempState)
+                        .padding()
+                        .frame(maxHeight: .infinity, alignment: .top)
+                    TimerPresentationDashboardItem(state: $tempState)
+                        .padding()
+                        .frame(maxHeight: .infinity, alignment: .top)
                 }
+                .textFieldStyle(.roundedBorder)
+                .buttonStyle(.bordered)
+                .tabViewStyle(.page)
+                .frame(height: 400)
                 
-                Section("Audio") {
-                    
-                }
+                Rectangle()
+                    .opacity(0)
+                    .frame(height: 100)
             }
             .navigationTitle("AV System")
             .overlay(alignment: .bottomLeading) {
@@ -42,6 +61,8 @@ struct ContentView: View {
                     .padding(.vertical, 4)
                 }
                 .buttonStyle(.bordered)
+                .background(.black)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
                 .padding()
 
             }
@@ -52,6 +73,9 @@ struct ContentView: View {
                 }
                 
                 Button("Cancel", role: .cancel) {}
+            }
+            .onChange(of: tempState) { newValue in
+                viewModel.send(state: newValue)
             }
         }
     }

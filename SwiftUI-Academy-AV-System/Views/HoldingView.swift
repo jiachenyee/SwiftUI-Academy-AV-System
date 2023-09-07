@@ -18,10 +18,10 @@ struct HoldingView: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 Spacer()
-                Text(title)
+                Text(try! AttributedString(markdown: title))
                     .foregroundStyle(Color("SwiftUIAcademy"))
                     .font(.system(size: widthUnit * 116, weight: .bold, design: .default))
-                Text(subtitle)
+                Text(try! AttributedString(markdown: subtitle))
                     .foregroundStyle(.white)
                     .font(.system(size: widthUnit * 55, weight: .bold, design: .default))
                 Spacer()

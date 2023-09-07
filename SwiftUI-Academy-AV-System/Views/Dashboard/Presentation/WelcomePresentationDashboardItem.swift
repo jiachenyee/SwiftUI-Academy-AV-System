@@ -20,16 +20,14 @@ struct WelcomePresentationDashboardItem: View {
         }, title: "Welcome") {
             Text("Slide Subtitle")
             TextField("Subtitle", text: $subtitle)
+#if os(macOS)
                 .onSubmit {
                     switch state {
-                    case .welcome: 
-                        withAnimation {
-                            state = .welcome(subtitle)
-                        }
+                    case .welcome: state = .welcome(subtitle)
                     default: break
                     }
                 }
-            
+#endif
             Spacer()
             
             Button("Connect to Display") {

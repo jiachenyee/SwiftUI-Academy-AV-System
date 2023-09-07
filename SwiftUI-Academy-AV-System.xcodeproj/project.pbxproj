@@ -49,6 +49,13 @@
 		32A3C45F2AA782480044E575 /* PresentationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC20C2AA6481D00596677 /* PresentationState.swift */; };
 		32A3C4622AA795130044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4612AA795130044E575 /* MCSessionState+CustomStringConvertible.swift */; };
 		32A3C4632AA7951A0044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C4612AA795130044E575 /* MCSessionState+CustomStringConvertible.swift */; };
+		32A3C4642AA80CB00044E575 /* DashboardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2002AA6419200596677 /* DashboardElement.swift */; };
+		32A3C4652AA80CBA0044E575 /* HoldingPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC21C2AA6518200596677 /* HoldingPresentationDashboardItem.swift */; };
+		32A3C4662AA80CBA0044E575 /* DashboardHighlightedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC21A2AA64F6C00596677 /* DashboardHighlightedModifier.swift */; };
+		32A3C4672AA80CBA0044E575 /* TimerPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2222AA6534F00596677 /* TimerPresentationDashboardItem.swift */; };
+		32A3C4682AA80CBA0044E575 /* AppleTVPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2202AA652B800596677 /* AppleTVPresentationDashboardItem.swift */; };
+		32A3C4692AA80CBA0044E575 /* LunchPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC21E2AA6522300596677 /* LunchPresentationDashboardItem.swift */; };
+		32A3C46A2AA80CBA0044E575 /* WelcomePresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -411,14 +418,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32A3C4692AA80CBA0044E575 /* LunchPresentationDashboardItem.swift in Sources */,
 				32A3C4442AA77CBD0044E575 /* ContentView.swift in Sources */,
+				32A3C46A2AA80CBA0044E575 /* WelcomePresentationDashboardItem.swift in Sources */,
 				32A3C45F2AA782480044E575 /* PresentationState.swift in Sources */,
 				32A3C4422AA77CBD0044E575 /* AV_Remote_ControlApp.swift in Sources */,
+				32A3C4672AA80CBA0044E575 /* TimerPresentationDashboardItem.swift in Sources */,
 				32A3C45E2AA782280044E575 /* MCBrowserManager.swift in Sources */,
 				32A3C45A2AA781FC0044E575 /* ViewModel.swift in Sources */,
+				32A3C4652AA80CBA0044E575 /* HoldingPresentationDashboardItem.swift in Sources */,
+				32A3C4662AA80CBA0044E575 /* DashboardHighlightedModifier.swift in Sources */,
+				32A3C4642AA80CB00044E575 /* DashboardElement.swift in Sources */,
 				32A3C4502AA77CD80044E575 /* MultipeerConstants.swift in Sources */,
 				32A3C4622AA795130044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */,
 				32A3C45C2AA7820F0044E575 /* ViewModel+MultipeerConnectivity.swift in Sources */,
+				32A3C4682AA80CBA0044E575 /* AppleTVPresentationDashboardItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

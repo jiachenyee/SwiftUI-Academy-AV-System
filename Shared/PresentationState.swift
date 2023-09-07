@@ -34,7 +34,7 @@ enum ZoomPosition: Codable {
     }
 }
 
-enum PresentationState: Codable {
+enum PresentationState: Codable, Equatable {
     case welcome(String)
     case holding(String, String)
     /// - Parameters: Return time
