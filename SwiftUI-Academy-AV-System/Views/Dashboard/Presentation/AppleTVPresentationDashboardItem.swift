@@ -13,62 +13,80 @@ struct AppleTVPresentationDashboardItem: View {
     
     @State private var position: ZoomPosition = .normal
     
+    @State private var startDate: Date?
+    
     var body: some View {
         DashboardElement(icon: {
             Image(systemName: "appletv.fill")
-        }, title: "Hot Chocolate") {
-            Text("Zoom Position")
-            Button("Reset to Normal") {
-                withAnimation {
-                    position = .normal
-                    state = .tv(position)
-                }
-            }
-            HStack {
-                Button {
-                    withAnimation {
-                        position = .topLeading
-                        state = .tv(position)
-                    }
-                } label: {
-                    Image(systemName: "rectangle.inset.topleading.filled")
-                }
-                Button {
-                    withAnimation {
-                        position = .bottomLeading
-                        state = .tv(position)
-                    }
-                } label: {
-                    Image(systemName: "rectangle.inset.bottomleading.filled")
-                }
-                Button {
-                    withAnimation {
-                        position = .topTrailing
-                        state = .tv(position)
-                    }
-                } label: {
-                    Image(systemName: "rectangle.inset.toptrailing.filled")
-                }
-                Button {
-                    withAnimation {
-                        position = .bottomTrailing
-                        state = .tv(position)
-                    }
-                } label: {
-                    Image(systemName: "rectangle.inset.bottomtrailing.filled")
-                }
-            }
+        }, title: "Apple TV") {
+//            Text("Zoom Position")
+//            Button("Reset to Normal") {
+//                withAnimation {
+//                    position = .normal
+//                    state = .tv(position, false)
+//                }
+//            }
+//            HStack {
+//                Button {
+//                    withAnimation {
+//                        position = .topLeading
+//                        state = .tv(position, false)
+//                    }
+//                } label: {
+//                    Image(systemName: "rectangle.inset.topleading.filled")
+//                }
+//                Button {
+//                    withAnimation {
+//                        position = .bottomLeading
+//                        state = .tv(position, false)
+//                    }
+//                } label: {
+//                    Image(systemName: "rectangle.inset.bottomleading.filled")
+//                }
+//                Button {
+//                    withAnimation {
+//                        position = .topTrailing
+//                        state = .tv(position, false)
+//                    }
+//                } label: {
+//                    Image(systemName: "rectangle.inset.toptrailing.filled")
+//                }
+//                Button {
+//                    withAnimation {
+//                        position = .bottomTrailing
+//                        state = .tv(position, false)
+//                    }
+//                } label: {
+//                    Image(systemName: "rectangle.inset.bottomtrailing.filled")
+//                }
+//            }
 
-            Spacer()
-            Button("Connect to Display") {
-                withAnimation {
-                    state = .tv(position)
-                }
+            if let startDate, state.isTV {
+                Text(startDate, style: .timer)
+                    .font(.title)
             }
+            
+            Spacer()
+            
+            Button("Connect Normal") {
+                withAnimation {
+                    state = .tv(position, false)
+                }
+                startDate = .now
+            }
+            .keyboardShortcut(KeyboardShortcut("3", modifiers: .command))
+            
+            Button("Connect Feedback") {
+                withAnimation {
+                    state = .tv(.normal, true)
+                }
+                startDate = .now
+            }
+            .keyboardShortcut(KeyboardShortcut("4", modifiers: .command))
         }
     }
 }
 
 #Preview {
-    AppleTVPresentationDashboardItem(state: .constant(.tv(.normal)))
+    AppleTVPresentationDashboardItem(state: .constant(.tv(.normal, false)))
 }

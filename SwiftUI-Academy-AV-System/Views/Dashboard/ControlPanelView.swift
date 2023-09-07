@@ -30,32 +30,39 @@ struct ControlPanelView: View {
                 }
                 
                 DashboardSection(systemName: "sparkles.tv", title: "Presentation") {
-                    WelcomePresentationDashboardItem(state: $viewModel.state)
-                        .dashboardHighlighted(isEnabled: viewModel.state.isWelcome, color: .yellow)
-                    
                     HoldingPresentationDashboardItem(state: $viewModel.state)
                         .dashboardHighlighted(isEnabled: viewModel.state.isHolding, color: .cyan)
                     
-                    LunchPresentationDashboardItem(state: $viewModel.state)
-                        .dashboardHighlighted(isEnabled: viewModel.state.isLunch, color: .blue)
+                    FruitEmojiPresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isFruitEmoji, color: .green)
                     
                     AppleTVPresentationDashboardItem(state: $viewModel.state)
                         .dashboardHighlighted(isEnabled: viewModel.state.isTV, color: .white)
                     
-                    TimerPresentationDashboardItem(state: $viewModel.state)
-                        .dashboardHighlighted(isEnabled: viewModel.state.isTimer, color: .orange)
                     
                     DashboardElement(icon: {
-                        Image(systemName: "calendar.badge.clock")
+                        Image(systemName: "list.bullet")
                             .foregroundStyle(.red)
-                    }, title: "Countdown") {
+                    }, title: "Presentation Order") {
+                        Text("Display the presentation order with needlessly anticipatory animation.")
                         Spacer()
                         Button("Connect to Display") {
                             withAnimation {
-                                viewModel.state = .countdown
+                                viewModel.state = .presentationOrder
                             }
                         }
+                        .keyboardShortcut(KeyboardShortcut("5", modifiers: .command))
                     }
+                    .dashboardHighlighted(isEnabled: viewModel.state.isPresentationOrder, color: .red)
+                    
+                    WelcomePresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isWelcome, color: .yellow)
+                    
+                    TimerPresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isTimer, color: .orange)
+                    
+                    StatementPresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isStatement, color: .purple)
                 }
                 
                 DashboardSection(systemName: "speaker.wave.2", title: "Audio") {

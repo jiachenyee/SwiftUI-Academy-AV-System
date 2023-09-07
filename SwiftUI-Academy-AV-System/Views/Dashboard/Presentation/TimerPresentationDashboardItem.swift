@@ -26,10 +26,11 @@ struct TimerPresentationDashboardItem: View {
                     state = .timer(TimeInterval(minutes * 60))
                 }
             }
+            .keyboardShortcut(KeyboardShortcut("7", modifiers: .command))
         }
     }
 }
 
 #Preview {
-    TimerPresentationDashboardItem(state: .constant(.tv(.normal)))
+    TimerPresentationDashboardItem(state: .constant(.tv(.normal, false)))
 }

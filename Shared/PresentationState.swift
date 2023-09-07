@@ -36,12 +36,14 @@ enum ZoomPosition: Codable {
 
 enum PresentationState: Codable, Equatable {
     case welcome(String)
+    case statement(String)
+    case presentationOrder
     case holding(String, String)
-    /// - Parameters: Return time
-    case lunch(String)
-    case tv(ZoomPosition)
+    case tv(ZoomPosition, Bool)
+    case fruitEmoji(String)
+    case lunch(String) // Unused
     case timer(TimeInterval)
-    case countdown
+    case countdown // Unused
     
     var isWelcome: Bool {
         switch self {
@@ -74,6 +76,27 @@ enum PresentationState: Codable, Equatable {
     var isTimer: Bool {
         switch self {
         case .timer: return true
+        default: return false
+        }
+    }
+    
+    var isFruitEmoji: Bool {
+        switch self {
+        case .fruitEmoji: return true
+        default: return false
+        }
+    }
+    
+    var isPresentationOrder: Bool {
+        switch self {
+        case .presentationOrder: return true
+        default: return false
+        }
+    }
+    
+    var isStatement: Bool {
+        switch self {
+        case .statement: return true
         default: return false
         }
     }

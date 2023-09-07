@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		322AD95D2AAA172C00E094B4 /* StatementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD95C2AAA172C00E094B4 /* StatementView.swift */; };
+		322AD95F2AAA191A00E094B4 /* PresentationOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD95E2AAA191A00E094B4 /* PresentationOrderView.swift */; };
+		322AD9612AAA25CC00E094B4 /* FruitEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9602AAA25CC00E094B4 /* FruitEmojiView.swift */; };
+		322AD9632AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9622AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift */; };
+		322AD9652AAA37A800E094B4 /* StatementPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9642AAA37A800E094B4 /* StatementPresentationDashboardItem.swift */; };
 		329BC1EE2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC1ED2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift */; };
 		329BC1F02AA63D5100596677 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC1EF2AA63D5100596677 /* ContentView.swift */; };
 		329BC1F22AA63D5400596677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 329BC1F12AA63D5400596677 /* Assets.xcassets */; };
@@ -59,6 +64,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322AD95C2AAA172C00E094B4 /* StatementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementView.swift; sourceTree = "<group>"; };
+		322AD95E2AAA191A00E094B4 /* PresentationOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationOrderView.swift; sourceTree = "<group>"; };
+		322AD9602AAA25CC00E094B4 /* FruitEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitEmojiView.swift; sourceTree = "<group>"; };
+		322AD9622AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitEmojiPresentationDashboardItem.swift; sourceTree = "<group>"; };
+		322AD9642AAA37A800E094B4 /* StatementPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementPresentationDashboardItem.swift; sourceTree = "<group>"; };
 		329BC1EA2AA63D5100596677 /* SwiftUI-Academy-AV-System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Academy-AV-System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		329BC1ED2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Academy_AV_SystemApp.swift; sourceTree = "<group>"; };
 		329BC1EF2AA63D5100596677 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,12 +180,15 @@
 			isa = PBXGroup;
 			children = (
 				329BC1EF2AA63D5100596677 /* ContentView.swift */,
+				322AD9602AAA25CC00E094B4 /* FruitEmojiView.swift */,
+				322AD95E2AAA191A00E094B4 /* PresentationOrderView.swift */,
 				32A3C4392AA70C130044E575 /* CountdownView.swift */,
 				32A3C41D2AA6E5CD0044E575 /* AppleTVView.swift */,
 				329BC22A2AA6595C00596677 /* TimerView.swift */,
 				329BC2262AA657BB00596677 /* HoldingView.swift */,
 				329BC2282AA6588500596677 /* LunchView.swift */,
 				329BC2242AA654FB00596677 /* WelcomeView.swift */,
+				322AD95C2AAA172C00E094B4 /* StatementView.swift */,
 				329BC1FC2AA63DA000596677 /* CameraView.swift */,
 				329BC20B2AA6468A00596677 /* Dashboard */,
 			);
@@ -225,9 +238,11 @@
 		329BC2192AA64F3A00596677 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				322AD9642AAA37A800E094B4 /* StatementPresentationDashboardItem.swift */,
 				329BC2172AA64D9B00596677 /* WelcomePresentationDashboardItem.swift */,
-				329BC21C2AA6518200596677 /* HoldingPresentationDashboardItem.swift */,
+				322AD9622AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift */,
 				329BC2202AA652B800596677 /* AppleTVPresentationDashboardItem.swift */,
+				329BC21C2AA6518200596677 /* HoldingPresentationDashboardItem.swift */,
 				329BC21E2AA6522300596677 /* LunchPresentationDashboardItem.swift */,
 				329BC2222AA6534F00596677 /* TimerPresentationDashboardItem.swift */,
 				329BC21A2AA64F6C00596677 /* DashboardHighlightedModifier.swift */,
@@ -391,6 +406,7 @@
 				329BC1FF2AA63E5B00596677 /* ControlPanelView.swift in Sources */,
 				329BC21D2AA6518200596677 /* HoldingPresentationDashboardItem.swift in Sources */,
 				32A3C41E2AA6E5CD0044E575 /* AppleTVView.swift in Sources */,
+				322AD95D2AAA172C00E094B4 /* StatementView.swift in Sources */,
 				329BC22B2AA6595C00596677 /* TimerView.swift in Sources */,
 				329BC1F02AA63D5100596677 /* ContentView.swift in Sources */,
 				329BC2212AA652B800596677 /* AppleTVPresentationDashboardItem.swift in Sources */,
@@ -403,12 +419,16 @@
 				329BC2182AA64D9B00596677 /* WelcomePresentationDashboardItem.swift in Sources */,
 				329BC2292AA6588500596677 /* LunchView.swift in Sources */,
 				329BC21F2AA6522300596677 /* LunchPresentationDashboardItem.swift in Sources */,
+				322AD9632AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift in Sources */,
 				32A3C43A2AA70C130044E575 /* CountdownView.swift in Sources */,
+				322AD9652AAA37A800E094B4 /* StatementPresentationDashboardItem.swift in Sources */,
 				329BC2152AA64A0900596677 /* DashboardCaptureCameraSettings.swift in Sources */,
+				322AD9612AAA25CC00E094B4 /* FruitEmojiView.swift in Sources */,
 				329BC2232AA6534F00596677 /* TimerPresentationDashboardItem.swift in Sources */,
 				329BC2032AA641AE00596677 /* CameraInput.swift in Sources */,
 				329BC20D2AA6481D00596677 /* PresentationState.swift in Sources */,
 				329BC2252AA654FB00596677 /* WelcomeView.swift in Sources */,
+				322AD95F2AAA191A00E094B4 /* PresentationOrderView.swift in Sources */,
 				32A3C4632AA7951A0044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */,
 				32A3C44F2AA77CD60044E575 /* MultipeerConstants.swift in Sources */,
 			);

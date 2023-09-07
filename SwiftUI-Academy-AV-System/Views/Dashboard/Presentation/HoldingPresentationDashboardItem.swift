@@ -31,10 +31,11 @@ struct HoldingPresentationDashboardItem: View {
                     state = .holding(title, subtitle)
                 }
             }
+            .keyboardShortcut(KeyboardShortcut("1", modifiers: .command))
         }
     }
 }
 
 #Preview {
-    HoldingPresentationDashboardItem(state: .constant(.tv(.normal)))
+    HoldingPresentationDashboardItem(state: .constant(.tv(.normal, false)))
 }

@@ -29,8 +29,14 @@ struct ContentView: View {
                 LunchView(returnTime: returnTime)
             case .countdown:
                 CountdownView()
-            case .tv(let zoomState):
-                AppleTVView(zoomState: zoomState, cameraViewModel: cameraViewModel)
+            case .tv(let zoomState, let showTimer):
+                AppleTVView(isFeedbackState: showTimer, zoomState: zoomState, cameraViewModel: cameraViewModel)
+            case .statement(let text):
+                StatementView(text: text)
+            case .presentationOrder:
+                PresentationOrderView()
+            case .fruitEmoji(let emoji):
+                FruitEmojiView(emoji: emoji)
             }
         }
         .aspectRatio(16/9, contentMode: .fit)

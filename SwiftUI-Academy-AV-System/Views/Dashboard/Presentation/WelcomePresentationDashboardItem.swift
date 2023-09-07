@@ -35,10 +35,11 @@ struct WelcomePresentationDashboardItem: View {
                     state = .welcome(subtitle)
                 }
             }
+            .keyboardShortcut(KeyboardShortcut("6", modifiers: .command))
         }
     }
 }
 
 #Preview {
-    WelcomePresentationDashboardItem(state: .constant(.tv(.normal)))
+    WelcomePresentationDashboardItem(state: .constant(.tv(.normal, false)))
 }

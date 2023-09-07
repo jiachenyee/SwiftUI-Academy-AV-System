@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WelcomeView: View {
     
-    @State private var colors = [Color.yellow, Color.orange]
+    @State private var colors = [Color.green, Color.yellow, Color.orange]
     
     var subtitle: String
     
@@ -17,21 +17,67 @@ struct WelcomeView: View {
         GeometryReader { geometry in
             let widthUnit = geometry.size.width / 1920
             
-            LinearGradient(colors: colors, startPoint: .bottomLeading, endPoint: .topTrailing)
+            Color.black
+            
             VStack(alignment: .leading, spacing: 0) {
                 Spacer()
-                Text("Welcome Back.")
-                    .foregroundStyle(.black)
-                    .font(.system(size: widthUnit * 116, weight: .bold, design: .default))
-                Text(subtitle)
-                    .foregroundStyle(.black)
-                    .font(.system(size: widthUnit * 55, weight: .bold, design: .default))
+                Text("Welcome to Apple.")
+                    .foregroundStyle(.white)
+                    .font(.system(size: widthUnit * 80, weight: .medium, design: .default))
+                    .frame(maxWidth: .infinity)
+                    .padding(.bottom, widthUnit * 36)
+                
+                VStack(spacing: widthUnit * 8) {
+                    HStack {
+                        Image(systemName: "sparkles.rectangle.stack")
+                            .frame(width: widthUnit * 40)
+                            .foregroundStyle(.yellow)
+                        
+                        Text("Prepare your materials.")
+                            .padding(.leading, widthUnit * 21)
+                        
+                        Spacer()
+                    }
+                    .font(.system(size: widthUnit * 36, design: .default))
+                    
+                    HStack {
+                        Image(systemName: "wifi")
+                            .symbolEffect(.variableColor)
+                            .frame(width: widthUnit * 40)
+                            .foregroundStyle(.blue)
+                        
+                        Text("Connect to Apple Guest Wi-Fi.")
+                            .padding(.leading, widthUnit * 21)
+                        Spacer()
+                    }
+                    .font(.system(size: widthUnit * 36, design: .default))
+                    
+                    HStack {
+                        Image(systemName: "camera")
+                            .frame(width: widthUnit * 40)
+                            .foregroundStyle(.gray)
+                        
+                        Text("You may take photos within this room.")
+                            .padding(.leading, widthUnit * 21)
+                        Spacer()
+                    }
+                    .font(.system(size: widthUnit * 36, design: .default))
+                }
+                .frame(width: widthUnit * 700)
+                .frame(maxWidth: .infinity)
+                .padding(.bottom, widthUnit * 36)
+                
                 Spacer()
+                
+                Text("We will begin shortly.")
+                    .foregroundStyle(.white)
+                    .font(.system(size: widthUnit * 32, weight: .regular, design: .default))
+                    .frame(maxWidth: .infinity)
             }
             .padding(widthUnit * 95)
             
             Text("SUTD+SP SwiftUI Nano Academy")
-                .foregroundStyle(.black.opacity(0.6))
+                .foregroundStyle(.swiftUIAcademyGray)
                 .font(.system(size: widthUnit * 24, weight: .regular, design: .default))
                 .frame(maxHeight: .infinity, alignment: .bottom)
                 .padding(widthUnit * 95)
