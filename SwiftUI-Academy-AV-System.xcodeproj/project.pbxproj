@@ -12,6 +12,10 @@
 		322AD9612AAA25CC00E094B4 /* FruitEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9602AAA25CC00E094B4 /* FruitEmojiView.swift */; };
 		322AD9632AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9622AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift */; };
 		322AD9652AAA37A800E094B4 /* StatementPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9642AAA37A800E094B4 /* StatementPresentationDashboardItem.swift */; };
+		322AD9662AAAB24400E094B4 /* StatementPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9642AAA37A800E094B4 /* StatementPresentationDashboardItem.swift */; };
+		322AD9672AAAB24400E094B4 /* FruitEmojiPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9622AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift */; };
+		322AD9692AAAB28200E094B4 /* PresentationOrderPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9682AAAB28200E094B4 /* PresentationOrderPresentationDashboardItem.swift */; };
+		322AD96A2AAAB2B900E094B4 /* PresentationOrderPresentationDashboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322AD9682AAAB28200E094B4 /* PresentationOrderPresentationDashboardItem.swift */; };
 		329BC1EE2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC1ED2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift */; };
 		329BC1F02AA63D5100596677 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329BC1EF2AA63D5100596677 /* ContentView.swift */; };
 		329BC1F22AA63D5400596677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 329BC1F12AA63D5400596677 /* Assets.xcassets */; };
@@ -69,6 +73,7 @@
 		322AD9602AAA25CC00E094B4 /* FruitEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitEmojiView.swift; sourceTree = "<group>"; };
 		322AD9622AAA2D0300E094B4 /* FruitEmojiPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitEmojiPresentationDashboardItem.swift; sourceTree = "<group>"; };
 		322AD9642AAA37A800E094B4 /* StatementPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatementPresentationDashboardItem.swift; sourceTree = "<group>"; };
+		322AD9682AAAB28200E094B4 /* PresentationOrderPresentationDashboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationOrderPresentationDashboardItem.swift; sourceTree = "<group>"; };
 		329BC1EA2AA63D5100596677 /* SwiftUI-Academy-AV-System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Academy-AV-System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		329BC1ED2AA63D5100596677 /* SwiftUI_Academy_AV_SystemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Academy_AV_SystemApp.swift; sourceTree = "<group>"; };
 		329BC1EF2AA63D5100596677 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -217,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				329BC1FE2AA63E5B00596677 /* ControlPanelView.swift */,
+				322AD9682AAAB28200E094B4 /* PresentationOrderPresentationDashboardItem.swift */,
 				32A3C4572AA780020044E575 /* RemoteControlDashboardItem.swift */,
 				329BC2192AA64F3A00596677 /* Presentation */,
 				329BC2162AA64A3100596677 /* AirPlay Setup */,
@@ -404,6 +410,7 @@
 				329BC2112AA6492A00596677 /* DashboardSection.swift in Sources */,
 				329BC2012AA6419200596677 /* DashboardElement.swift in Sources */,
 				329BC1FF2AA63E5B00596677 /* ControlPanelView.swift in Sources */,
+				322AD9692AAAB28200E094B4 /* PresentationOrderPresentationDashboardItem.swift in Sources */,
 				329BC21D2AA6518200596677 /* HoldingPresentationDashboardItem.swift in Sources */,
 				32A3C41E2AA6E5CD0044E575 /* AppleTVView.swift in Sources */,
 				322AD95D2AAA172C00E094B4 /* StatementView.swift in Sources */,
@@ -440,15 +447,18 @@
 			files = (
 				32A3C4692AA80CBA0044E575 /* LunchPresentationDashboardItem.swift in Sources */,
 				32A3C4442AA77CBD0044E575 /* ContentView.swift in Sources */,
+				322AD9672AAAB24400E094B4 /* FruitEmojiPresentationDashboardItem.swift in Sources */,
 				32A3C46A2AA80CBA0044E575 /* WelcomePresentationDashboardItem.swift in Sources */,
 				32A3C45F2AA782480044E575 /* PresentationState.swift in Sources */,
 				32A3C4422AA77CBD0044E575 /* AV_Remote_ControlApp.swift in Sources */,
+				322AD96A2AAAB2B900E094B4 /* PresentationOrderPresentationDashboardItem.swift in Sources */,
 				32A3C4672AA80CBA0044E575 /* TimerPresentationDashboardItem.swift in Sources */,
 				32A3C45E2AA782280044E575 /* MCBrowserManager.swift in Sources */,
 				32A3C45A2AA781FC0044E575 /* ViewModel.swift in Sources */,
 				32A3C4652AA80CBA0044E575 /* HoldingPresentationDashboardItem.swift in Sources */,
 				32A3C4662AA80CBA0044E575 /* DashboardHighlightedModifier.swift in Sources */,
 				32A3C4642AA80CB00044E575 /* DashboardElement.swift in Sources */,
+				322AD9662AAAB24400E094B4 /* StatementPresentationDashboardItem.swift in Sources */,
 				32A3C4502AA77CD80044E575 /* MultipeerConstants.swift in Sources */,
 				32A3C4622AA795130044E575 /* MCSessionState+CustomStringConvertible.swift in Sources */,
 				32A3C45C2AA7820F0044E575 /* ViewModel+MultipeerConnectivity.swift in Sources */,

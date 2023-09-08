@@ -40,20 +40,8 @@ struct ControlPanelView: View {
                         .dashboardHighlighted(isEnabled: viewModel.state.isTV, color: .white)
                     
                     
-                    DashboardElement(icon: {
-                        Image(systemName: "list.bullet")
-                            .foregroundStyle(.red)
-                    }, title: "Presentation Order") {
-                        Text("Display the presentation order with needlessly anticipatory animation.")
-                        Spacer()
-                        Button("Connect to Display") {
-                            withAnimation {
-                                viewModel.state = .presentationOrder
-                            }
-                        }
-                        .keyboardShortcut(KeyboardShortcut("5", modifiers: .command))
-                    }
-                    .dashboardHighlighted(isEnabled: viewModel.state.isPresentationOrder, color: .red)
+                    PresentationOrderPresentationDashboardItem(state: $viewModel.state)
+                        .dashboardHighlighted(isEnabled: viewModel.state.isPresentationOrder, color: .red)
                     
                     WelcomePresentationDashboardItem(state: $viewModel.state)
                         .dashboardHighlighted(isEnabled: viewModel.state.isWelcome, color: .yellow)

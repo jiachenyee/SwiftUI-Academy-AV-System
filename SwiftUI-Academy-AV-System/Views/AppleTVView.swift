@@ -22,7 +22,7 @@ struct AppleTVView: View {
     
     private let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
-    let timeInterval = 600.0
+    let timeInterval = 480.0
     
     var body: some View {
         GeometryReader { geometry in

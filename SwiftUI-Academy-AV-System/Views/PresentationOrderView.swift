@@ -14,6 +14,8 @@ struct PresentationOrderView: View {
     @State private var runButtonScale = 1.0
     
     @State private var isCodeShown = true
+    @State private var isArrayPresented = false
+    @State private var rotation = Angle.zero
     
     var groupsSnippet: AttributedString {
         var firstSquareBracket = AttributedString("[\n    ")
@@ -54,6 +56,8 @@ struct PresentationOrderView: View {
         
         return firstSquareBracket + watermelon + comma + mango + comma + strawberry + comma + coconut + comma + orange + comma + pineapple + comma + grapes + comma + lemon + comma + kiwi + lastSquareBracket
     }
+    
+    @Namespace var namespace
     
     let timer = Timer.publish(every: 0.2, on: .main, in: .common).autoconnect()
     
@@ -96,9 +100,27 @@ struct PresentationOrderView: View {
             .opacity(isCodeShown ? 1 : 0)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
+            if !isCodeShown {
+                ZStack {
+                    Circle()
+                        .trim(from: 0, to: 1 - 0.25)
+                        .stroke(.angularGradient(colors: [.blue, .clear], center: .center, startAngle: .degrees(180), endAngle: .degrees(30)), style: .init(lineWidth: widthUnit * 48, lineCap: .round, lineJoin: .round))
+                        .frame(width: widthUnit * 256, height: widthUnit * 256)
+                        .rotationEffect(rotation)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .onAppear {
+                            withAnimation(.linear(duration: 1.5).repeatForever(autoreverses: false)) {
+                                rotation.degrees = 360
+                            }
+                        }
+                }
+                .scaleEffect(isArrayPresented ? 0.001 : 1)
+                .opacity(isArrayPresented ? 0 : 1)
+            }
+            
             Text(groupsSnippet)
-                .scaleEffect(isCodeShown ? 0.001 : 1)
-                .opacity(isCodeShown ? 0 : 1)
+                .scaleEffect(isArrayPresented ? 1 : 0.001)
+                .opacity(isArrayPresented ? 1 : 0)
                 .font(.system(size: widthUnit * 84, weight: .regular, design: .monospaced))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             
@@ -126,6 +148,10 @@ struct PresentationOrderView: View {
             } else if typeWriterState == 30 {
                 withAnimation {
                     isCodeShown.toggle()
+                }
+            } else if typeWriterState == 36 {
+                withAnimation {
+                    isArrayPresented.toggle()
                 }
             }
         }

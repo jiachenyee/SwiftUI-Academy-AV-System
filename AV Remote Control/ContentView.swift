@@ -17,19 +17,25 @@ struct ContentView: View {
         NavigationStack {
             ScrollView {
                 TabView {
-                    WelcomePresentationDashboardItem(state: $tempState)
+                    HoldingPresentationDashboardItem(state: $tempState)
                         .padding()
                         .frame(maxHeight: .infinity, alignment: .top)
-                    HoldingPresentationDashboardItem(state: $tempState)
+                    FruitEmojiPresentationDashboardItem(state: $tempState)
                         .padding()
                         .frame(maxHeight: .infinity, alignment: .top)
                     AppleTVPresentationDashboardItem(state: $tempState)
                         .padding()
                         .frame(maxHeight: .infinity, alignment: .top)
-                    LunchPresentationDashboardItem(state: $tempState)
+                    PresentationOrderPresentationDashboardItem(state: $tempState)
+                        .padding()
+                        .frame(maxHeight: .infinity, alignment: .top)
+                    WelcomePresentationDashboardItem(state: $tempState)
                         .padding()
                         .frame(maxHeight: .infinity, alignment: .top)
                     TimerPresentationDashboardItem(state: $tempState)
+                        .padding()
+                        .frame(maxHeight: .infinity, alignment: .top)
+                    StatementPresentationDashboardItem(state: $tempState)
                         .padding()
                         .frame(maxHeight: .infinity, alignment: .top)
                 }
